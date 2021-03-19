@@ -1,0 +1,567 @@
+
+@import url("reset.css");
+@import url("common.css");
+
+
+//
+$borwn:#a99578;
+$blue:#0F4C75;
+$white:#FCFCFC;
+$fontNoto:"Noto Sans CJK TC";
+$fontGeo:"Georgia";
+$fontSans:"sans-serif";
+
+
+*{
+	margin:0;
+	padding:0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+	font-family: $fontGeo,$fontNoto,$fontSans;
+}
+ul{list-style: none;}
+a{text-decoration: none;}
+img{display: block;}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+/*banner*/
+	.bg-area{
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+
+		>.bg-img{
+			width: 100%;
+			height: auto;
+			overflow: hidden;	
+
+			>img{
+				/*width: 100%;*/
+				max-height: 850px;
+				height: auto;	
+			}
+		} 
+
+		.headerTop{
+			position: absolute;
+			width: 32%;
+			height: 850px;
+			right: 0px;
+			top: 0px;
+			background: rgba(22,22,22,0.8);
+		}
+	}
+
+
+
+/*Accessories*/
+	.headerInfo{
+	     position: absolute;
+	     top: 41%;
+	     left: 43%;
+
+	     >h1{	
+			display: inline-block;
+			font-size: 60px;
+			padding-right: 45px;
+			margin-bottom: 34px;
+			color: $white;
+			font-family:Georgia;
+		}
+		.course-hr-box{
+			 width: 362px;
+			display: inline-block;
+
+			>hr{
+					border-color: $white;
+				    width: 100%;
+					margin-top: 0px;
+				    margin-right: 0px;
+				    margin-left: 0px;
+				    margin-bottom: 9px;
+			}
+		}
+
+		 .course-mob-hr{
+			border-color: $white;
+			width: 120px;
+		    margin-left: 0px;
+			display: none;
+			margin-top: 0px;
+		    margin-right: 0px;
+		    margin-left: 72px;
+		    margin-bottom: 9px;
+		}
+
+		>div>h4{
+			font-family: Noto Sans CJK TC;
+			font-size: 36px;
+			color: $white;
+			display: inline-block;
+		}
+	}
+
+
+
+
+/* 文字介紹 */
+	.course{
+		width: 100%;
+		height: auto;
+		overflow: hidden;		
+		background-color: black;
+		color: $white;
+
+		>div{
+		width: 100%;
+		height: 2040px;
+		padding-bottom: 96px;
+		overflow: hidden;
+		}
+
+		.content{
+			width: 100%;		
+			overflow: hidden;
+			position: absolute;
+			
+		}
+	}
+
+
+.content{
+	>.intro{
+		width: 100%;
+	    height: auto;
+	    overflow: hidden;
+		padding: 217px 5% 128px 29%;
+
+		>p{
+			font-family: "Noto Sans CJK TC";
+			font-size: 20px;
+			line-height: 36px;
+			color: $white;
+
+			&:first-child{padding-bottom: 28px;}
+		}
+	}
+
+	.course-img-Wrap{
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+		padding: 0 5%;
+	}
+
+}
+ 
+
+
+	.introImg1,
+	.introImg2,
+	.introImg3{
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+	}
+
+	.introImg1,.introImg2{
+		padding-bottom: 45px;
+	}
+	.course-img-Wrap img{
+		/* height: auto; */
+		display: inline-block;
+	}
+	.introImg1>img{
+		width: 100%;
+		height: 726px;
+	} 		
+	.introImg2>img:first-child{
+		width: 59%;
+		height: 458px;
+		margin: 0 3% 0 0;
+	}
+	.introImg2>img:nth-child(2){
+		width: 37.5%;
+		height: 458px;
+		float: right;
+	}
+	.introImg3>img:first-child{
+		width: 40%;
+		height: 447px;
+		margin: 0 3% 0 0;
+	}
+	.introImg3>img:nth-child(2){
+		width: 56%;	
+		height: 447px;
+		float: right;
+	}
+
+	.blue_R{
+		background: $borwn;
+		display: block;
+		position: absolute;
+		width: 24%;
+		height: 720px;
+	}
+
+/* hotel */
+	.hotel{
+		height: 1640px;
+		width: 100%;
+		background-color: black;
+		color: $white;
+	}
+	.blue{
+		background: $borwn;
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 1024px;	
+	}
+	 
+	.hotel>.content{
+		position: absolute;
+		padding: 0 6% 28px 7%;
+	    width: 100%;
+	}
+	.content>div{
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+	}
+	.hotel p{
+		font-size: 24px;
+		padding: 52px 0 40px 0;
+		display: inline-block;
+	}
+
+	.hotel-hr-box{
+		width: 130px;
+		display: inline-block;
+	}
+
+	.hotel hr{
+		width: 100%;
+		border-color:$white;
+		display: inline-block;
+		margin-bottom: 8px;
+	    margin-left: 26px;
+	}
+
+	.mob_img{
+		width: 257px;
+		height: 320px;
+		display: none;
+	}
+	.img1,.img2,.img3,.img4,.img5,.img6{
+		height: auto;
+		overflow: hidden;
+		display: inline-block;
+	}
+	.img1,.img3{
+		width: 58%;
+		margin-right: 3%;
+	}
+	.img2,.img4{
+		width: 38%;
+	}
+	.img5{
+		width: 48%;
+		margin-right:8% ;
+	}
+	.img6{
+		width: 43%;
+	}
+
+	 .img1 >img,.img2 >img {height: 370px;}
+	 .img3 >img,.img4 >img {height: 535px;}
+	 .img5 >img {height: 310px;}
+	 .img6 >img {height: 665px;}
+
+	.img5>img.first{
+		padding-bottom: 45px;
+	}
+	.hotel>.content img{
+		width: 100%;
+		/* height: auto; */
+		overflow: hidden;
+	}
+
+	.img4>p,.img6>p,.img6>div{
+		 visibility: hidden;
+	}
+
+
+
+/*section*/
+	section{
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+		padding: 45px 0;
+	}
+
+
+/* ---------- 1024 iPad  ----------*/
+@media screen and (max-width: 1024px){
+	.bg-area>.bg-img>img{
+		/*width: 100%;*/
+		max-height: 604px;
+	}
+	.headerTop{
+		/* width: 60%; */
+		height: 604px;
+	}
+	.headerInfo{
+	     top: 31%;
+	     left: 41%;
+	}
+	.headerInfo>h1{	
+		font-size: 42px;
+		padding-right: 32px;
+		margin-bottom: 24px;
+	}
+	.course-hr-box{
+		 width: 120px;
+	}
+	.headerInfo>div>h4{
+		font-size: 26px;
+	}
+	.content>.intro {
+		padding: 154px 6% 90px 6%;
+	}
+	.course>div{
+		height: 1521px;
+		padding-bottom: 67px;
+	}
+	.introImg1>img{
+		height: 408px;
+	}
+	.introImg2>img:first-child,
+	.introImg2>img:nth-child(2){
+		height: 312px;
+	}
+
+	.introImg3>img:first-child,
+	.introImg3>img:nth-child(2){
+		height: 199px;
+	}
+	 .hotel {height: 1511px;}
+	 .hotel-hr-box{width: 80px;}
+	 .img1 >img,.img2 >img {height: 262px;}
+	 .img3 >img,.img4 >img {height: 380px;}
+	 .img5 >img {height: 220px;}
+	 .img6 >img {height: 472px;}
+ 	 .blue {height: 792px;}
+}
+
+/* ---------- 768 iPad  ----------*/
+@media screen and (max-width: 768px){
+	.headerInfo {
+	    top: 25%;
+	}
+	.blue_R{
+		height: 520px;
+	}
+	.course>div {
+	    height: 1250px;
+	    padding-bottom: 50px;
+	}
+	.content>.intro {
+		height: 440px;
+	    padding: 115px 6% 28px 6%;
+	}
+	.introImg1, .introImg2 {
+   		 padding-bottom: 25px;
+	}
+	.introImg1>img{
+		height: 313px;
+	}
+	.introImg2>img:first-child,
+	.introImg2>img:nth-child(2){
+		height: 240px;
+	}
+
+	.introImg3>img:first-child,
+	.introImg3>img:nth-child(2){
+		height: 153px;
+	}
+	.hotel p {
+	    font-size: 20px;
+	    padding: 28px 0 21px 0;  
+	}
+	.hotel-hr-box {
+	    width: 58px;
+	}
+	.hotel hr {
+	    margin-left: 12px;
+	}
+	 .hotel {height: 1094px;}
+	 .img1 >img,.img2 >img {height: 196px;}
+	 .img3 >img,.img4 >img {height: 284px;}
+	 .img5 >img {height: 164px;}
+	 .img6 >img {height: 352px;}
+ 	 .blue {height: 565px;}
+
+	section {
+	    padding: 24px 0;
+	}
+}
+/* ---------- 616 調整  ----------*/
+@media screen and (max-width: 616px){
+	.hotel .img1 .hotel-hr-box,
+	.hotel .img2 .hotel-hr-box{
+		display: block;
+	}
+	.hotel {
+        height: 1140px;
+    }
+    .course>div {
+    	height: 1330px;
+	}
+	.content>.intro {
+    height: 650px;
+	}
+}
+/* ---------- 414 Mobile ----------*/
+@media screen and (max-width: 414px){
+	.bg-area{
+		height: 650px;
+	}
+	.headerTop {
+	    height: 650px;
+	    width: 39%;
+	}
+	
+	.headerInfo {
+	    top: 33%;
+	    left: 13%;
+	}
+	.headerInfo>h1{	
+		font-size: 60px;
+		margin-bottom: 20px;
+	}
+	.headerInfo>hr{
+		display: none;
+	}
+	.headerInfo>div>h4{
+		font-size: 24px;
+	}
+	.headerInfo>div>hr{
+		display: inline-block;
+	}
+	.bg-area>.bg-img>img{
+		max-height: 650px;	
+	}
+
+
+	/*course*/
+	.blue_R {
+	    width: 30%;
+	    height: 239px;
+	}
+	.content{
+		padding: 0px 0 0 0px;
+	}
+	.content>.intro {
+	    padding: 67px 15px 50px 15px;
+	}
+
+	.intro p {
+	    font-size: 24px;
+	}
+	.course>div{
+		height: 1020px;
+	}
+	.introImg1, .introImg2 {
+   		 padding-bottom: 15px;
+	}
+	.introImg1>img{
+		height: 176px;
+	}
+	.introImg2>img:first-child,
+	.introImg2>img:nth-child(2){
+		height: 108px;
+	}
+	.introImg3>img:first-child,
+	.introImg3>img:nth-child(2){
+		height: 108px;
+	}
+
+
+/*Trump Turnberry hotel*/
+	.blue{height: 1345px;}
+	.hotel{height: 2634px;}
+	.hotel>.content {
+		padding: 0;
+	}
+	.hotel .flex-box{
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.hotel{height: 2090px;}
+	.hotel p {
+	    padding: 44px 38px 16px 22px;
+	    width: 375px;
+	}
+	.hotel hr{
+		margin-top: 0px;
+   		margin-bottom: 38px;
+	}
+	.img4>p,.img5>.hotel-hr-box>hr{
+		display: none;
+	}
+	.img6>p,.img6>.hotel-hr-box>hr{
+		visibility: visible;
+	}
+	.img3 >img,
+	.img5 >img,
+	.img6 >img
+	{
+		margin-bottom: 16px;
+	}
+
+	.img5 >p{
+		display: none;
+	}
+
+	.img1,.img2,.img3,.img4,.img5,.img6{
+		display: block;
+		width: 100%;
+		margin-right: 0%;
+	}
+	.hotel-hr-box {
+	    width: 130px;
+	}
+	.hotel hr {
+    	margin-left: 22px;
+	}
+	.img1>img{height: 294px;}
+	.img2>img{height: 294px;}  
+	.img3>img{height: 407px;}
+	.img4>img{height: 475px;}  
+	.img5>img{height: 219px;}
+	.img6>img{height: 362px;}   
+
+	section {
+	    padding: 36px 0;
+	}
+}
+
+
+@media screen and (max-width: 375px){
+	.hotel {
+  		height: 2604px;
+	}
+	.img1>img{height: 260px;}
+	.img2>img{height: 260px;}  
+	.img3>img{height: 360px;}
+	.img4>img{height: 420px;}  
+	.img5>img{height: 194px;}
+	.img6>img{height: 320px;}  
+
+}

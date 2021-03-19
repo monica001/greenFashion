@@ -1,0 +1,490 @@
+/*#a99578*/
+
+@font-face {
+  font-family: 'Noto Sans CJK TC';
+  src: 
+       url('../fonts/NotoSansCJKTC/NotoSansCJKtc-Regular.otf') format("opentype")
+}
+ 
+
+ /*中間的過度的橫線*/
+	hr{
+		width: 168px;
+		display: inline-block;
+	    border-color: #0F4C75;
+	    margin: 18px 50px;
+	    border-top-width: 0px;
+	    border-bottom-width: 1px;
+	}
+
+
+	h3.reserve{
+		margin: 0 auto;
+		padding-top: 22px;
+		padding-bottom: 22px;
+		width: 20%; 
+	    text-align: center;
+		cursor: pointer;
+		-webkit-transition: 0.3s;
+           -moz-transition: 0.3s;
+		        transition: 0.3s;
+
+		font-size: 24px;
+	    font-family: Noto Sans CJK TC;
+	    font-weight: bold;
+	    color: #FCFCFC;
+	    background: #a99578;
+	    box-shadow: 0px 4px 11px rgba(239, 167, 64, 0.25);
+	}
+	h3.reserve:hover,
+	.headerbtm:hover
+	{
+		background: #0F4C75;
+	}
+ /*header*/
+	header{
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    z-index: 99
+	}
+
+	header >.logo{
+		width: 86px;
+		height: auto;
+	    overflow: hidden;
+	    margin: 15px 0 0 2.6%;
+	}
+	header >.logo>img{
+		width: 100%;
+		height: auto;
+		overflow: hidden;	
+	}
+
+
+/* PC nav */
+	.menu{
+		position: absolute;
+	    top: 32px;
+	    right: 0px;
+	    padding-right: 50px;
+	    
+	}
+	.menu div{
+	    display: block;
+	    float: left;
+	    margin-left: 35px;
+	    
+	}
+	.menu div >a{
+		font-size: 21px;
+		color: #FCFCFC;
+		font-family: Noto Sans CJK TC;
+	}
+	.menu div >a:hover{
+	    border-bottom: 5px solid #FCFCFC;
+	    font-weight: bold;
+	}
+
+	.sticky {
+		position: fixed;
+	    top: 0;
+	    background-color: rgba(255, 255, 255, 0.3);
+	    padding: 10px 50px 10px 10px;
+	    width: 100%;
+	    right: 0;
+	    opacity: 0.8;
+
+	    display: flex;
+	    justify-content: flex-end;
+	    align-items: center;
+	}
+
+
+/* map */
+
+	.map{
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+	}
+	.continent{
+	  width: 25%;
+	  height: auto;
+	  overflow: hidden;
+	  position: relative;
+	} 
+ 	.continent, .white-map, .continent p{
+ 		 	  /* CSS3淡出淡入效果,2秒 */
+	  -webkit-transition: opacity 2s ease-in-out;
+	  -moz-transition: opacity 2s ease-in-out;
+	  -o-transition: opacity 2s ease-in-out;
+	  transition: opacity 2s ease-in-out;
+ 	}
+	.continent:hover {
+		opacity: 0.7;	 
+	}
+	.white-map:hover,
+	.continent p:hover {
+		opacity: 0.5;	 
+	}
+	.continent >.senece-map{
+		width: 100%;
+		height: 650px;
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.white-map-wrap{
+	  width: 100%;
+	  position: absolute;
+	  z-index:1;
+	  top: 29%;
+	}
+
+	.white-map{
+	    margin: 0 auto;
+	 }
+
+	.map p{
+		font-family: Noto Sans CJK TC;
+	    font-size: 24px;
+	    color: #FCFCFC;
+	    position: absolute;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    bottom: 30%;
+	}
+
+
+	.am-w{width: 65%;}
+	.other-w{width: 50%;}
+
+	.am{background-image: url('../images/Rectangle 6.jpg');}
+	.eu{background-image: url('../images/Rectangle 199.jpg');}
+	.asia{background-image: url('../images/Rectangle 200.jpg');}
+	.aus{background-image: url('../images/Rectangle 201.jpg');}
+
+	.map.flex-box{
+	    display: flex;
+	    justify-content:  flex-start;
+	}
+
+ 
+
+/*footer*/
+	footer{
+		width: 100%;
+		height: auto;
+        overflow: hidden;
+		background: black;
+		color: #FCFCFC;
+		position: relative;
+	}
+	footer >div{
+		width: 100%;
+	    height: auto;
+	    overflow: hidden;
+		padding: 50px 9% 68px 6%;
+	}
+
+	footer h3{
+		font-weight: bold;
+		font-size: 36px;
+		line-height: 48px;
+		font-family: Noto Sans CJK TC;
+	}
+
+	footer span,footer p{
+		font-size: 24px;
+		font-family: Noto Sans CJK TC;
+	}
+	footer p{
+		line-height: 36px;	
+	}
+	footer table td:nth-child(even){
+		padding-left: 15px;
+	}
+	footer span{
+		line-height:  48px;
+	}
+	footer >div>p{
+		font-family: Georgia;
+	}
+	 
+	.foo_left{
+		float: left;
+		padding-top: 114px;
+	}
+
+	.foo_right{
+		float: right ;
+	}
+
+	.fas,.far{
+		font-size: x-large;
+	}	 
+
+	.go-top{
+		z-index: 100;
+		/*background-color: rgba(0,0,0,.2);*/
+		color: gray;
+		opacity: 0.7;
+	    padding: 12px 14px;
+	    position: absolute;
+	    bottom: 20px;
+	    right: 20px;
+	}
+	.go-top:hover{
+		text-shadow: 1px 2px 3px darkslategrey;
+		color: white;
+	}
+/*手機 nav*/
+	.mob{
+
+	}
+	.mob_nav{
+	 	width: 300px;
+	    height: 812px;
+	    background-color:  #161616;
+		position: absolute;
+		z-index: 199;
+	    top: 0;
+	    right: 0;
+	    display: none;
+	}
+	.mob_Btn{
+		float: right;
+		padding-top: 15px;
+		padding-right: 23px;
+	}
+	.mob_Open{
+		width: 25px;
+		height: 21px;
+		display: none;
+		position: absolute;
+	    top: 15px;
+	    right: 24px;
+	}
+	.mob_Close{
+		width: 20px;
+		height: 22px;
+	}
+	.mob_List{
+		
+	}
+	.mob_List nav{
+		padding-top: 175px;
+	    padding-right: 90px;
+	}
+	.mob_List nav div{
+		display: block;
+		margin-bottom: 35px;
+	    text-align: end;
+	}
+	.mob_List nav a{
+		font-family: Noto Sans CJK TC;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 36px;
+		padding-bottom: 4px;
+		color: #FCFCFC;
+	}
+
+	.mob_List nav a:hover{
+		border-bottom: 3px solid #FCFCFC;
+	}
+
+
+
+
+ /* ---------- 1200  ----------*/
+@media screen and (max-width: 1200px){
+	.menu div{
+	    margin-left: 24px;
+	}
+	.menu div >a{}
+		
+}
+
+/* ---------- 1024 iPad  ----------*/
+@media screen and (max-width:1024px){
+	.menu div >a{
+		font-size: 20px;
+	}
+	.menu {
+    padding-right: 20px;
+	}
+	.menu div {
+    margin-left: 12px;
+	}
+	.continent >.senece-map{
+		height: 462px;
+	}
+	footer >div {
+  	  padding: 40px 8% 40px 5%;
+	}
+	footer h3 {
+	    font-size: 32px;
+	    line-height: 48px;
+	}
+	.foo_left {
+	    padding-top: 134px;
+	}
+	.foo_right {
+	    padding-top: 20px;
+	}
+}
+
+/* ---------- 920 menu ----------*/
+@media screen and (max-width: 920px){
+	.menu div >a {
+    font-size: 18px;
+	}
+}
+
+/* ---------- 768 iPad  ----------*/
+@media screen and (max-width: 768px){
+	.mob_Open{display: block;}
+	header>nav{display: none;}
+
+	
+	.continent >.senece-map{
+		height: 345px;
+	}
+	.map p{
+		font-size: 20px;
+	}
+	.map>div:last-child>p{
+		min-width: 100px;
+	}
+ 	h3.reserve{
+	 	padding: 12px 18px;
+	    font-size: 22px;
+	}
+	footer >div {
+  	  padding: 27px 8% 40px 5%;
+	}
+	footer h3 {
+	    font-size: 28px;
+	    line-height: 40px;
+	}
+	footer span,footer p{
+		font-size: 20px;
+	}
+	footer span{
+		line-height: 40px;	
+	}
+	footer .flex-box{
+		padding-top: 50px;
+	    display: flex;
+	    flex-direction: column-reverse;
+	}
+	.foo_right{
+		float: none;
+	}
+	.foo_left {
+	    float: none;
+	    padding-top: 56px;
+	}
+
+}
+
+ /* ---------- mobile 414 ----------*/
+@media screen and (max-width: 414px){
+	header >.logo img{
+		width: 46px;
+   		height: 34px;
+        margin: 0px 0 0 16px;
+	}
+
+	footer table i:first-child{
+		padding-bottom: 30px;
+	}
+	footer table td{
+		vertical-align: baseline;
+	}
+	.map{
+		height: 1000px;
+		height: auto;
+   		overflow: hidden;
+	}
+
+    .continent{
+    	width: 100%;
+   		height: auto;
+   		overflow: hidden;
+    }
+	.continent >.senece-map{
+		height: 250px;
+	}
+	.white-map-wrap {
+		top: 16%;
+	}
+	 .map p{
+		bottom: 12%;
+	}
+	
+	.am-w{width: 40%;}
+	.other-w{width: 33%;}
+
+	.am{background-image: url('../images/Rectangle 6-1.jpg');}
+	.eu{background-image: url('../images/Rectangle 199-1.jpg');}
+	.asia{background-image: url('../images/Rectangle 200-1.jpg');}
+	.aus{background-image: url('../images/Rectangle 212-1.jpg');}
+    .map.flex-box{flex-direction: column;}
+
+    .go-top{}
+    .fa-map-marker-alt{
+		padding-bottom:26px;
+	}
+	h3.reserve {
+	    margin: 0 auto;
+	    width: 48%;  
+	    padding-top: 20px;
+	    padding-bottom: 20px;
+	}
+}
+
+ /* ---------- mobile 375 ----------*/
+@media screen and (max-width: 375px){
+ 
+	footer{
+		/* height: 620px; */
+	}
+	footer >div{
+		padding: 24px 26px 32px 5%;
+		height: 100%;
+	}
+
+	footer h3{
+		font-size: 24px;
+		line-height: 36px;
+	}
+
+	footer .span-first{
+		line-height: 24px;	
+	}
+
+	footer span,footer p{
+		font-size: 18px;
+	}
+
+	footer p{
+		line-height: 36px;	
+	}
+	 
+	
+
+	/*hr橫線*/
+	hr{
+		width: 50px;
+		margin: 16px 32px;
+	}
+
+}
+
