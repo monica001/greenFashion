@@ -1,15 +1,404 @@
-@import url("reset.css");
-@import url("common.css");
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: "Georgia", "Noto Sans CJK TC", "sans-serif";
+@charset "UTF-8";
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
 
-ul {
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+ol, ul {
   list-style: none;
 }
 
@@ -21,6 +410,568 @@ img {
   display: block;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Georgia", "Noto Sans CJK TC", "sans-serif";
+}
+
+.heading_Noto_and_Blue, .form p {
+  font-family: "Noto Sans CJK TC";
+  color: #0F4C75;
+  font-weight: bold;
+}
+
+.heading_Noto_and_White, .headerInfo > p {
+  font-family: "Noto Sans CJK TC";
+  color: #FCFCFC;
+}
+
+@font-face {
+  font-family: "Noto Sans CJK TC";
+  src: url("../fonts/NotoSansCJKTC/NotoSansCJKtc-Regular.otf") format("opentype");
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/*中間的過度的橫線*/
+hr {
+  width: 168px;
+  display: inline-block;
+  border-color: #0F4C75;
+  margin: 18px 50px;
+  border-top-width: 0px;
+  border-bottom-width: 1px;
+}
+
+h3.reserve {
+  margin: 0 auto;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  width: 20%;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 24px;
+  font-family: "Noto Sans CJK TC";
+  font-weight: bold;
+  color: #FCFCFC;
+  background: #a99578;
+  box-shadow: 0px 4px 11px rgba(239, 167, 64, 0.25);
+}
+
+h3.reserve:hover,
+.headerbtm:hover {
+  background: #0F4C75;
+}
+
+/*header*/
+header {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+header > .logo {
+  width: 86px;
+  height: auto;
+  overflow: hidden;
+  margin: 15px 0 0 2.6%;
+}
+
+header > .logo > img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+/* PC nav */
+.menu {
+  position: absolute;
+  top: 32px;
+  right: 0px;
+  padding-right: 50px;
+}
+
+.menu div {
+  display: block;
+  float: left;
+  margin-left: 35px;
+}
+
+.menu div > a {
+  font-size: 21px;
+  color: #FCFCFC;
+  font-family: "Noto Sans CJK TC";
+}
+
+.menu div > a:hover {
+  border-bottom: 5px solid #FCFCFC;
+  font-weight: bold;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px 50px 10px 10px;
+  width: 100%;
+  right: 0;
+  opacity: 0.8;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* map */
+.map {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.continent {
+  width: 25%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.continent, .white-map, .continent p {
+  /* CSS3淡出淡入效果,2秒 */
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
+}
+
+.continent:hover {
+  opacity: 0.7;
+}
+
+.white-map:hover,
+.continent p:hover {
+  opacity: 0.5;
+}
+
+.continent > .senece-map {
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.white-map-wrap {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 29%;
+}
+
+.white-map {
+  margin: 0 auto;
+}
+
+.map p {
+  font-family: "Noto Sans CJK TC";
+  font-size: 24px;
+  color: #FCFCFC;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30%;
+}
+
+.am-w {
+  width: 65%;
+}
+
+.other-w {
+  width: 50%;
+}
+
+.am {
+  background-image: url("../images/Rectangle 6.jpg");
+}
+
+.eu {
+  background-image: url("../images/Rectangle 199.jpg");
+}
+
+.asia {
+  background-image: url("../images/Rectangle 200.jpg");
+}
+
+.aus {
+  background-image: url("../images/Rectangle 201.jpg");
+}
+
+.map.flex-box {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/*footer*/
+footer {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: black;
+  color: #FCFCFC;
+  position: relative;
+}
+
+footer > div {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 50px 9% 68px 6%;
+}
+
+footer h3 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  font-family: "Noto Sans CJK TC";
+}
+
+footer span, footer p {
+  font-size: 24px;
+  font-family: "Noto Sans CJK TC";
+}
+
+footer p {
+  line-height: 36px;
+}
+
+footer table td:nth-child(even) {
+  padding-left: 15px;
+}
+
+footer span {
+  line-height: 48px;
+}
+
+footer > div > p {
+  font-family: Georgia;
+}
+
+.foo_left {
+  float: left;
+  padding-top: 114px;
+}
+
+.foo_right {
+  float: right;
+}
+
+.fas, .far {
+  font-size: x-large;
+}
+
+.go-top {
+  z-index: 100;
+  /*background-color: rgba(0,0,0,.2);*/
+  color: gray;
+  opacity: 0.7;
+  padding: 12px 14px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.go-top:hover {
+  text-shadow: 1px 2px 3px darkslategrey;
+  color: white;
+}
+
+/*手機 nav*/
+.mob_nav {
+  width: 300px;
+  height: 812px;
+  background-color: #161616;
+  position: absolute;
+  z-index: 199;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+.mob_Btn {
+  float: right;
+  padding-top: 15px;
+  padding-right: 23px;
+}
+
+.mob_Open {
+  width: 25px;
+  height: 21px;
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 24px;
+}
+
+.mob_Close {
+  width: 20px;
+  height: 22px;
+}
+
+.mob_List nav {
+  padding-top: 175px;
+  padding-right: 90px;
+}
+
+.mob_List nav div {
+  display: block;
+  margin-bottom: 35px;
+  text-align: end;
+}
+
+.mob_List nav a {
+  font-family: "Noto Sans CJK TC";
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  padding-bottom: 4px;
+  color: #FCFCFC;
+}
+
+.mob_List nav a:hover {
+  border-bottom: 3px solid #FCFCFC;
+}
+
+/* ---------- 1200  ----------*/
+@media screen and (max-width: 1200px) {
+  .menu div {
+    margin-left: 24px;
+  }
+}
+/* ---------- 1024 iPad  ----------*/
+@media screen and (max-width: 1024px) {
+  .menu div > a {
+    font-size: 20px;
+  }
+
+  .menu {
+    padding-right: 20px;
+  }
+
+  .menu div {
+    margin-left: 12px;
+  }
+
+  .continent > .senece-map {
+    height: 462px;
+  }
+
+  footer > div {
+    padding: 40px 8% 40px 5%;
+  }
+
+  footer h3 {
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  .foo_left {
+    padding-top: 134px;
+  }
+
+  .foo_right {
+    padding-top: 20px;
+  }
+}
+/* ---------- 920 menu ----------*/
+@media screen and (max-width: 920px) {
+  .menu div > a {
+    font-size: 18px;
+  }
+}
+/* ---------- 768 iPad  ----------*/
+@media screen and (max-width: 768px) {
+  .mob_Open {
+    display: block;
+  }
+
+  header > nav {
+    display: none;
+  }
+
+  .continent > .senece-map {
+    height: 345px;
+  }
+
+  .map p {
+    font-size: 20px;
+  }
+
+  .map > div:last-child > p {
+    min-width: 100px;
+  }
+
+  h3.reserve {
+    padding: 12px 18px;
+    font-size: 22px;
+  }
+
+  footer > div {
+    padding: 27px 8% 40px 5%;
+  }
+
+  footer h3 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  footer span, footer p {
+    font-size: 20px;
+  }
+
+  footer span {
+    line-height: 40px;
+  }
+
+  footer .flex-box {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .foo_right {
+    float: none;
+  }
+
+  .foo_left {
+    float: none;
+    padding-top: 56px;
+  }
+}
+/* ---------- mobile 414 ----------*/
+@media screen and (max-width: 414px) {
+  header > .logo img {
+    width: 46px;
+    height: 34px;
+    margin: 0px 0 0 16px;
+  }
+
+  footer table i:first-child {
+    padding-bottom: 30px;
+  }
+
+  footer table td {
+    vertical-align: baseline;
+  }
+
+  .map {
+    height: 1000px;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .continent {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .continent > .senece-map {
+    height: 250px;
+  }
+
+  .white-map-wrap {
+    top: 16%;
+  }
+
+  .map p {
+    bottom: 12%;
+  }
+
+  .am-w {
+    width: 40%;
+  }
+
+  .other-w {
+    width: 33%;
+  }
+
+  .am {
+    background-image: url("../images/Rectangle 6-1.jpg");
+  }
+
+  .eu {
+    background-image: url("../images/Rectangle 199-1.jpg");
+  }
+
+  .asia {
+    background-image: url("../images/Rectangle 200-1.jpg");
+  }
+
+  .aus {
+    background-image: url("../images/Rectangle 212-1.jpg");
+  }
+
+  .map.flex-box {
+    flex-direction: column;
+  }
+
+  .fa-map-marker-alt {
+    padding-bottom: 26px;
+  }
+
+  h3.reserve {
+    margin: 0 auto;
+    width: 48%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+/* ---------- mobile 375 ----------*/
+@media screen and (max-width: 375px) {
+  footer {
+    /* height: 620px; */
+  }
+
+  footer > div {
+    padding: 24px 26px 32px 5%;
+    height: 100%;
+  }
+
+  footer h3 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  footer .span-first {
+    line-height: 24px;
+  }
+
+  footer span, footer p {
+    font-size: 18px;
+  }
+
+  footer p {
+    line-height: 36px;
+  }
+
+  /*hr橫線*/
+  hr {
+    width: 50px;
+    margin: 16px 32px;
+  }
+}
 html, body {
   width: 100%;
   height: 100%;
@@ -52,11 +1003,8 @@ html, body {
 }
 
 .headerInfo > p {
-  font-family: Noto Sans CJK TC;
   font-size: 36px;
   margin-bottom: 28px;
-  /* White */
-  color: #FCFCFC;
 }
 
 .headerInfo > hr {
@@ -101,12 +1049,9 @@ html, body {
 }
 
 .form p {
-  font-family: Noto Sans CJK TC;
-  font-weight: bold;
   font-size: 24px;
   padding-bottom: 8px;
   /* 	padding-bottom: 14px; */
-  color: #0F4C75;
 }
 
 .form ul > li > input {

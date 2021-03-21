@@ -1,28 +1,9 @@
 
-@import url("reset.css");
-@import url("common.css");
+@import "reset";
+@import "common";
 
 
-//
-$borwn:#a99578;
-$blue:#0F4C75;
-$white:#FCFCFC;
-$fontNoto:"Noto Sans CJK TC";
-$fontGeo:"Georgia";
-$fontSans:"sans-serif";
 
-
-*{
-	margin:0;
-	padding:0;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-	font-family: $fontGeo,$fontNoto,$fontSans;
-}
-ul{list-style: none;}
-a{text-decoration: none;}
-img{display: block;}
 html,body{
     width: 100%;
     height: 100%;
@@ -55,11 +36,9 @@ html,body{
 	}
 
 	.headerInfo>p{
-		font-family: Noto Sans CJK TC;
+		@extend .heading_Noto_and_White;
 		font-size: 36px;
 		margin-bottom: 28px;
-		/* White */
-		color: $white;
 	}
 
 	.headerInfo>hr{
@@ -71,20 +50,14 @@ html,body{
 /*section*/
  	.black{color:black;}
 	.form{
-		width: 100%;
-		height: auto;
-		overflow: hidden;
+		@include Rwd_Property;
 		padding: 78px 9%;
 	}
 	.form>div{
-		width: 100%;
-		height: auto;
-		overflow: hidden;
+		@include Rwd_Property;
 	}
 	.form ul{
-		width: 100%;
-		height: auto;
-		overflow: hidden;
+		@include Rwd_Property;
 		
 	}
 	.form ul>li{
@@ -97,12 +70,10 @@ html,body{
 		padding-right:0%;
 	}
 	.form p{
-		font-family: Noto Sans CJK TC;
-		font-weight: bold;
+		@extend .heading_Noto_and_Blue;
 		font-size: 24px;
 		padding-bottom: 8px;
 	/* 	padding-bottom: 14px; */
-		color: $blue;
 	}
 	.form ul>li>input{
 		width: 100%;

@@ -1,9 +1,24 @@
 @charset "UTF-8";
-/*#a99578*/
+.heading_Noto_and_Blue {
+  font-family: "Noto Sans CJK TC";
+  color: #0F4C75;
+  font-weight: bold;
+}
+
+.heading_Noto_and_White {
+  font-family: "Noto Sans CJK TC";
+  color: #FCFCFC;
+}
+
 @font-face {
   font-family: "Noto Sans CJK TC";
   src: url("../fonts/NotoSansCJKTC/NotoSansCJKtc-Regular.otf") format("opentype");
 }
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
 /*中間的過度的橫線*/
 hr {
   width: 168px;
@@ -25,7 +40,7 @@ h3.reserve {
   -moz-transition: 0.3s;
   transition: 0.3s;
   font-size: 24px;
-  font-family: Noto Sans CJK TC;
+  font-family: "Noto Sans CJK TC";
   font-weight: bold;
   color: #FCFCFC;
   background: #a99578;
@@ -78,7 +93,7 @@ header > .logo > img {
 .menu div > a {
   font-size: 21px;
   color: #FCFCFC;
-  font-family: Noto Sans CJK TC;
+  font-family: "Noto Sans CJK TC";
 }
 
 .menu div > a:hover {
@@ -150,7 +165,7 @@ header > .logo > img {
 }
 
 .map p {
-  font-family: Noto Sans CJK TC;
+  font-family: "Noto Sans CJK TC";
   font-size: 24px;
   color: #FCFCFC;
   position: absolute;
@@ -209,12 +224,12 @@ footer h3 {
   font-weight: bold;
   font-size: 36px;
   line-height: 48px;
-  font-family: Noto Sans CJK TC;
+  font-family: "Noto Sans CJK TC";
 }
 
 footer span, footer p {
   font-size: 24px;
-  font-family: Noto Sans CJK TC;
+  font-family: "Noto Sans CJK TC";
 }
 
 footer p {
@@ -306,7 +321,7 @@ footer > div > p {
 }
 
 .mob_List nav a {
-  font-family: Noto Sans CJK TC;
+  font-family: "Noto Sans CJK TC";
   font-weight: bold;
   font-size: 24px;
   line-height: 36px;
